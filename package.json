@@ -1,0 +1,37 @@
+{
+  "name": "hasan-life-guide",
+  "version": "1.0.0",
+  "description": "Offline-First Personal Life Management Suite with Voice, Notes, and 3D AI Mascot",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "server:install": "npm install --prefix server",
+    "server:dev": "npm run dev --prefix server",
+    "server:build": "npm run build --prefix server",
+    "server:test": "npm run test --prefix server",
+    "server:start": "npm run start --prefix server",
+    "client:install": "npm install --prefix client",
+    "client:dev": "npm run dev --prefix client",
+    "client:build": "npm run build --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "npm run server:start",
+    "test": "npm run server:test"
+  },
+  "keywords": [
+    "life-guide",
+    "notes",
+    "voice-notes",
+    "tasks",
+    "habits",
+    "expenses",
+    "hasan-robot",
+    "trilingual",
+    "rtl",
+    "sophia-mode"
+  ],
+  "author": "Hasan",
+  "license": "MIT"
+}

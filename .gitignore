@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.env
+*.log
+uploads/audio/*
+!uploads/audio/.gitkeep
+hasan_life.db
+hasan_life.db-journal
+.DS_Store
+
+.vercel

@@ -1,0 +1,292 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-fallback: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html[lang="bn"] {
+    font-family: 'Hind Siliguri', var(--font-fallback);
+  }
+
+  html[lang="ar"] {
+    font-family: 'Cairo', var(--font-fallback);
+  }
+
+  html:not([lang="bn"]):not([lang="ar"]) {
+    font-family: 'Plus Jakarta Sans', var(--font-fallback);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.55);
+}
+
+/* ========================================================
+   THEME 1: SOPHIA MODE (Cinematic Luxury, Glowing & Glass)
+   ======================================================== */
+.theme-sophia {
+  background-color: #070814;
+  color: #F8FAFC;
+}
+
+.theme-sophia .app-card {
+  background: rgba(14, 16, 38, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(121, 40, 202, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.theme-sophia .app-card:hover {
+  border-color: rgba(0, 223, 216, 0.5);
+  box-shadow: 0 12px 40px 0 rgba(121, 40, 202, 0.3), 0 0 20px rgba(0, 223, 216, 0.2);
+}
+
+.theme-sophia .app-nav {
+  background: rgba(9, 10, 26, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-sophia .app-modal {
+  background: #0B0D23;
+  border: 1px solid rgba(0, 223, 216, 0.35);
+  box-shadow: 0 0 45px rgba(121, 40, 202, 0.35);
+  color: #F8FAFC;
+}
+
+.theme-sophia .app-drawer {
+  background-color: rgba(9, 11, 30, 0.96);
+  border-color: rgba(0, 223, 216, 0.3);
+  color: #F8FAFC;
+}
+
+.theme-sophia .app-subcard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme-sophia .app-subcard:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(0, 223, 216, 0.35);
+}
+
+.theme-sophia .app-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.theme-sophia .app-input:focus {
+  border-color: #00DFD8;
+  box-shadow: 0 0 15px rgba(0, 223, 216, 0.3);
+}
+
+.sophia-glass-card {
+  background: rgba(14, 16, 38, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(121, 40, 202, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.sophia-glow-pill {
+  background: linear-gradient(135deg, rgba(121, 40, 202, 0.4) 0%, rgba(0, 223, 216, 0.4) 100%);
+  border: 1px solid rgba(0, 223, 216, 0.6);
+  box-shadow: 0 0 18px rgba(0, 223, 216, 0.3);
+}
+
+/* ========================================================
+   THEME 2: DARK MODE (Ultra-Clear, High-Contrast OLED Dark)
+   ======================================================== */
+.theme-dark {
+  background-color: #0B0F19;
+  color: #F8FAFC;
+}
+
+.theme-dark .app-card {
+  background: #141C2B;
+  border: 1px solid #2B3A52;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+}
+
+.theme-dark .app-card:hover {
+  border-color: #38BDF8;
+  box-shadow: 0 6px 24px -2px rgba(14, 165, 233, 0.2);
+}
+
+.theme-dark .app-nav {
+  background: #0E1524;
+  border-color: #243147;
+}
+
+.theme-dark .app-modal {
+  background: #141C2B;
+  border: 1px solid #2B3A52;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7);
+  color: #F8FAFC;
+}
+
+.theme-dark .app-drawer {
+  background: #0E1524;
+  border-color: #243147;
+  color: #F8FAFC;
+}
+
+.theme-dark .app-subcard {
+  background: #0B0F19;
+  border: 1px solid #243147;
+}
+
+.theme-dark .app-subcard:hover {
+  background: #101726;
+  border-color: #38BDF8;
+}
+
+.theme-dark .app-input {
+  background: #0B0F19;
+  border: 1px solid #2B3A52;
+  color: #FFFFFF;
+}
+
+.theme-dark .app-input:focus {
+  border-color: #38BDF8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+/* ========================================================
+   THEME 3: LIGHT MODE (Crisp Paper-White Luxury Clean)
+   ======================================================== */
+.theme-light {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+.theme-light .app-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light .app-card:hover {
+  border-color: #0EA5E9;
+  box-shadow: 0 8px 25px -2px rgba(14, 165, 233, 0.12);
+}
+
+.theme-light .app-nav {
+  background: #FFFFFF;
+  border-color: #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+.theme-light .app-modal {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  color: #0F172A;
+}
+
+.theme-light .app-drawer {
+  background: #FFFFFF;
+  border-color: #E2E8F0;
+  color: #0F172A;
+}
+
+.theme-light .app-subcard {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+}
+
+.theme-light .app-subcard:hover {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+.theme-light .app-input:focus {
+  border-color: #0EA5E9;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.15);
+}
+
+/* ========================================================
+   ULTRA-SMOOTH GPU ROBOT MASCOT ANIMATIONS (0% CPU LAG)
+   ======================================================== */
+@keyframes robotLevitate {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(1deg);
+  }
+}
+
+@keyframes handWaveLeft {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-14deg);
+  }
+}
+
+@keyframes handWaveRight {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(16deg);
+  }
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(0.72);
+    opacity: 0.3;
+  }
+}
+
+.animate-robot-levitate {
+  animation: robotLevitate 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-hand-wave-left {
+  animation: handWaveLeft 2.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-hand-wave-right {
+  animation: handWaveRight 2s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-shadow-pulse {
+  animation: shadowPulse 3s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+

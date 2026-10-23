@@ -1,0 +1,32 @@
+{
+  "name": "হাসান লাইফ গাইড | Hasan Life Guide",
+  "short_name": "হাসান গাইড",
+  "description": "আপনার ব্যক্তিগত এআই জীবনসঙ্গী ও প্রোডাক্টিভিটি স্যুট (ভয়েস নোট, টাস্ক, অভ্যাস ও খরচ হিসাব)",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070814",
+  "theme_color": "#070814",
+  "lang": "bn",
+  "dir": "auto",
+  "categories": [
+    "productivity",
+    "utilities",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "/robot-icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/robot-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
